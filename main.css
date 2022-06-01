@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --darkest: rgb(21, 22, 22);
+    --dark: rgb(38, 39, 39);
+    --grey: rgb(53, 53, 53);
+    --light:rgb(87, 87, 87);
+    --lighter:rgb(135, 135, 135);
+    --lightest:rgb(191, 191, 191);
+    --red:rgb(162, 36, 36);
+    --pink:rgb(229, 65, 117);
+    --orange:rgb(202, 122, 51);
+    --blue:rgb(51, 194, 202);
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--grey);
+    color: var(--lighter);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+    padding: 2rem;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+input, button{
+    border: none;
+    background: none;
+    outline: none;
+}
+#form{
+    display: flex;
+}
+#user-input{
+    flex: 1 1 0%;
+    background-color: var(--dark);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--lighter);
+}
+#user-submit{
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-left: 2rem;
+    background-image: linear-gradient(to right, var(--pink), var(--red));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+#user-submit:hover{
+    opacity: 0.5;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    
+}
+.text{
+    color: var(--lightest);
+    font-size: 1.25rem;
+    flex: 1 1 0%;
+}
+.text:not(:read-only){
+    color: var(--red);
+}
+.inputs{
+    margin: 0 -0.5rem;
+}
+.inputs>button{
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+}
+.check{
+    width: 1.5rem;
+    border-radius: 2rem;
+    background-color: var(--lightest);
+    margin-right: 1rem;
+    transition: all .3s ease-in-out;
+}
+.check:hover{
+    transform: scale(1.1);
+}
+.check.checked{
+    background-color: var(--blue);
+}
+.text.checked, .edit.checked{ 
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.edit{
+    background-image: linear-gradient(to right, var(--pink), var(--red));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+.edit:hover, .delete:hover{
+    opacity: .5;
+}
+.delete{
+    color: var(--orange);
+    transition: all 0.3s ease-in-out;
+}
+
